@@ -27,16 +27,16 @@ public class task_2 {
 
     class Answer {
         public int[] subArrays(int[] a, int[] b){
-            // Введите свое решение ниже
-            int [] d = {0};
-            if (a.length != b.length) {
-                return d;
+            if(a == null || b == null || a.length != b.length){
+                return new int[1]; // нулевой массив длины 1 будет означать различие в длине массивов
             }
-            int[] c = new int[a.length];
-            for (int i = 0; i < a.length; i++) {
-                c[i] = a[i] - b[i];
+            else{
+                int[] c = new int[a.length];
+                for(int i = 0; i < a.length; i++){
+                    c[i] = a[i] - b[i];
+                }
+                return c;
             }
-            return c;
         }
 
 
