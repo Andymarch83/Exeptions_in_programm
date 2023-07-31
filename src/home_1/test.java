@@ -82,9 +82,9 @@ public class test {
 //             a = 10/1;
 //            System.out.println(st.length());
 //        }catch (ArithmeticException e){
-//            System.out.println("Уебан! На ноль делишь!!!");
+//            System.out.println("На ноль делишь!!!");
 //        }catch (NullPointerException e){
-//            System.out.println("Строка путая, Еблан!!!");
+//            System.out.println("Строка путая!!!");
 //        }
 //        System.out.println(a);
 //    }
