@@ -25,6 +25,7 @@ public static void printSum(Integer a, Integer b) throws FileNotFoundException {
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class task_3 {
     public static void main(String[] args) throws Exception {
@@ -45,12 +46,21 @@ public class task_3 {
         }
     }
     public static void printSum(Integer a, Integer b) throws FileNotFoundException {
+        FileReader fr = null;
         System.out.println(a + b);
         {
             try {
-                FileReader fr = new FileReader("file");
+                fr = new FileReader("file");
             } catch (FileNotFoundException e) {
-                throw new RuntimeException(e);
+                System.out.println("ИСКЛЮЧЕНИЕ: " + e.getClass().getSimpleName());
+            }finally {
+                if (fr != null){
+                    try {
+                        fr.close();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                }
             }
         }
     }
