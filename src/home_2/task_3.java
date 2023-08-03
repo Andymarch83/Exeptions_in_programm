@@ -58,7 +58,7 @@ public class task_3 {
                     try {
                         fr.close();
                     } catch (IOException e) {
-                        throw new RuntimeException(e);
+                        System.out.println("ИСКЛЮЧЕНИЕ: " + e.getClass().getSimpleName());
                     }
                 }
             }
